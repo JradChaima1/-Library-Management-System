@@ -3,19 +3,6 @@ using Library.Core.Models;
 using Library.Core.Interfaces;
 namespace Library.Data.Repositories
 {
-    public interface IBookLoanRepository : IRepository<BookLoan>
-    {
-        Task<IEnumerable<BookLoan>> GetActiveLoansByMemberAsync(int memberId);
-        Task<IEnumerable<BookLoan>> GetOverdueLoansAsync();
-        Task<IEnumerable<BookLoan>> GetLoansByStatusAsync(string status);
-        Task<IEnumerable<BookLoan>> GetLoansByDateRangeAsync(DateTime startDate, DateTime endDate);
-        Task<IEnumerable<BookLoan>> GetLoanHistoryByMemberAsync(int memberId);
-        Task<IEnumerable<BookLoan>> GetLoanHistoryByBookAsync(int bookId);
-        Task<BookLoan> GetActiveLoanByBookAndMemberAsync(int bookId, int memberId);
-        Task<int> GetOverdueDaysAsync(int loanId);
-        Task<IEnumerable<BookLoan>> GetDueSoonLoansAsync(int days);
-    }
-
     public class BookLoanRepository : BaseRepository<BookLoan>, IBookLoanRepository
     {
         public BookLoanRepository(LibraryContext context) : base(context)
@@ -63,7 +50,7 @@ namespace Library.Data.Repositories
 
             var overdueDays = (today - dueDate).Days;
             
-            // Check grace period
+        
             var member = await _context.Members
                 .Include(m => m.MembershipType)
                 .FirstOrDefaultAsync(m => m.MemberId == loan.MemberId);
