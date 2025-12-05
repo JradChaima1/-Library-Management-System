@@ -1,4 +1,6 @@
-public class BookAuthor
+namespace Library.Core.Models
+{
+public class BookAuthor: BaseEntity
 {
   
     public int BookId { get; set; }
@@ -10,4 +12,5 @@ public class BookAuthor
    
     public Book Book { get; set; }
     public Author Author { get; set; }
+}
 }

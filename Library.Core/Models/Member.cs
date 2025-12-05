@@ -1,4 +1,5 @@
-public class Member
+namespace Library.Core.Models{
+public class Member: BaseEntity
 {
  
     public int MemberId { get; set; }
@@ -25,4 +26,5 @@ public class Member
     public ICollection<BookLoan> BookLoans { get; set; }
     public ICollection<Reservation> Reservations { get; set; }
     public ICollection<Fine> Fines { get; set; }
+}
 }

@@ -1,4 +1,5 @@
-public class Publisher
+namespace Library.Core.Models{
+public class Publisher: BaseEntity
 {
   
     public int PublisherId { get; set; }
@@ -14,4 +15,5 @@ public class Publisher
     
   
     public ICollection<Book> Books { get; set; }
+}
 }

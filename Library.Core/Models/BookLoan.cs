@@ -1,4 +1,5 @@
-public class BookLoan
+namespace Library.Core.Models{
+public class BookLoan : BaseEntity
 {
    
     public int BookLoanId { get; set; }
@@ -22,4 +23,5 @@ public class BookLoan
     public Staff IssuedByStaff { get; set; }
     public Staff ReturnedByStaff { get; set; }
     public Fine Fine { get; set; }  
+}
 }

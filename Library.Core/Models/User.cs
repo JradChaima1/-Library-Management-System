@@ -1,4 +1,6 @@
-public class User
+namespace Library.Core.Models{
+
+public class User: BaseEntity
 {
  
     public int UserId { get; set; }
@@ -21,4 +23,5 @@ public class User
     public Role Role { get; set; }
     public Staff Staff { get; set; }
     public Member Member { get; set; }
+}
 }

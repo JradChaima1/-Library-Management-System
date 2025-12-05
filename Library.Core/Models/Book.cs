@@ -1,4 +1,6 @@
-public class Book
+namespace Library.Core.Models
+{
+public class Book: BaseEntity
 {
  
     public int BookId { get; set; }
@@ -30,4 +32,5 @@ public class Book
     public ICollection<BookAuthor> BookAuthors { get; set; }  // Many-to-Many
     public ICollection<BookLoan> BookLoans { get; set; }
     public ICollection<Reservation> Reservations { get; set; }
+}
 }

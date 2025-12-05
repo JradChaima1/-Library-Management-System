@@ -1,4 +1,5 @@
-public class Fine
+namespace Library.Core.Models{
+public class Fine: BaseEntity
 {
 
     public int FineId { get; set; }
@@ -23,4 +24,5 @@ public class Fine
     public Member Member { get; set; }
     public BookLoan BookLoan { get; set; }
     public Staff WaivedByStaff { get; set; }
+}
 }

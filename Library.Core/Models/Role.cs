@@ -1,4 +1,5 @@
-public class Role
+namespace Library.Core.Models{
+public class Role: BaseEntity
 {
   
     public int RoleId { get; set; }
@@ -9,4 +10,5 @@ public class Role
     
   
     public ICollection<User> Users { get; set; }
+}
 }

@@ -1,4 +1,5 @@
-public class MembershipType
+namespace Library.Core.Models{
+public class MembershipType: BaseEntity
 {
  
     public int MembershipTypeId { get; set; }
@@ -18,4 +19,5 @@ public class MembershipType
     
   
     public ICollection<Member> Members { get; set; }
+}
 }

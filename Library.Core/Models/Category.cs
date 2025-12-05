@@ -1,4 +1,5 @@
-public class Category
+namespace Library.Core.Models{
+public class Category: BaseEntity
 {
 
     public int CategoryId { get; set; }
@@ -12,4 +13,5 @@ public class Category
     public Category ParentCategory { get; set; }
     public ICollection<Category> SubCategories { get; set; }
     public ICollection<Book> Books { get; set; }
+}
 }

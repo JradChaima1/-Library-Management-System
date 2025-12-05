@@ -1,4 +1,5 @@
-public class Staff
+namespace Library.Core.Models{
+public class Staff: BaseEntity
 {
 
     public int StaffId { get; set; }
@@ -19,4 +20,5 @@ public class Staff
     public ICollection<BookLoan> ReturnedLoans { get; set; }
     public ICollection<Reservation> FulfilledReservations { get; set; }
     public ICollection<Fine> WaivedFines { get; set; }
+}
 }

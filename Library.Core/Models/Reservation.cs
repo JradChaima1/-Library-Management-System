@@ -1,4 +1,5 @@
-public class Reservation
+namespace Library.Core.Models{
+public class Reservation: BaseEntity
 {
    
     public int ReservationId { get; set; }
@@ -19,4 +20,5 @@ public class Reservation
     public Member Member { get; set; }
     public Book Book { get; set; }
     public Staff FulfilledByStaff { get; set; }
+}
 }
